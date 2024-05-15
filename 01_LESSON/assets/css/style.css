@@ -1,12 +1,13 @@
-body, html{
+*{
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+}
+body {
     background: #4e54c8;
     animation: color 9s infinite linear;
-    font-size: 15px;
 }
 
 .area {
