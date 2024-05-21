@@ -198,9 +198,10 @@ figure {
 
 .background p {
     display: inline-block;
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
     width: 414px;
+    padding: 16px;
 }
 
 .background h1 {
@@ -287,8 +288,8 @@ figure {
 }
 
 .tech-stack .skills-show {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    display: flex;
+    flex-direction: row;
     max-width: 600px;
     justify-content: center;
     text-align: center;
@@ -304,6 +305,7 @@ figure {
     text-align: center;
     align-items: center;
     margin: 70px auto;
+    padding: 16px;
 }
 
 .clickable-text:hover {
