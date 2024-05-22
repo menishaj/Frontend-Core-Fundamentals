@@ -7,6 +7,10 @@ html {
     ;
 }
 
+.wrapper {
+    max-width: 414px;
+}
+
 .header {
     height: 65px;
     width: 100%;
@@ -189,7 +193,7 @@ figure {
 }
 
 .intro {
-    max-width: 414px;
+    width: 100%;
 }
 
 .background {
@@ -212,6 +216,7 @@ figure {
     position: relative;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -230,10 +235,44 @@ figure {
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.35s;
-    margin-top: 28px;
+    margin: 28px auto;
+}
+.button a:before,
+.button a:after {
+  position: absolute;
+  content: attr(data-title);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 2px solid #333;
+  text-indent: 0;
+  transition: all 0.35s;
 }
 
-.whatido {
+.button a:before {
+  color: #fff;
+  background: #333;
+  transform-origin: left;
+  transform: translateX(0) rotateY(0deg);
+}
+
+.button a:after {
+  color: #333;
+  background: #fff;
+  transform: translateX(-100%) rotateY(90deg);
+  transform-origin: right;
+}
+
+.button a:hover:before {
+  transform: translateX(100%) rotateY(90deg);
+}
+
+.button a:hover:after {
+  transform: translateX(0) rotateY(0deg);
+}
+
+.wrapper .whatido {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -242,6 +281,8 @@ figure {
     align-items: center;
     text-align: left;
     padding: 16px;
+    width: 100%;
+    margin-top: 42px;;
 
 }
 
@@ -277,11 +318,14 @@ figure {
     transform-origin: bottom left;
 }
 
-.tech-stack {
+.wrapper .tech-stack {
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-.tech-stack h2 {
+.tech-stack h1 {
     border-bottom: 2.5px solid #726f6f;
     margin-bottom: 20px;
     text-align: center;
@@ -393,31 +437,48 @@ figure {
     transform-origin: bottom left;
 }
 
-.work-experience {
-    padding: 16px
+.wrapper .work-experience {
+    padding: 16px;
+    width: 100%;
 }
 
-.certifications, .education, .contactme {
+.wrapper .certifications,
+.wrapper .education,
+.wrapper .contactme {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 16px;
+    width: 100%;
+
 }
+
+.certifications h2 {
+    margin-bottom: 20px;
+}
+
+.certs {
+    list-style-type: none;
+}
+
 .non-breaking-hyphen::before {
     content: "\2011";
-  }
-  .container-icon{
+}
+
+.container-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-  }
-  .copyright{
+    gap: 10px;
+}
+
+.copyright {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 33px 16px;
 
-  }
+}
