@@ -453,7 +453,12 @@ figure {
     width: 100%;
 
 }
-
+.education h2{
+    margin: 20px auto;
+}
+.education p{
+    line-height: 2;
+}
 .certifications h2 {
     margin-bottom: 20px;
 }
