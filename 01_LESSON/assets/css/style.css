@@ -592,6 +592,7 @@ figure {
 .wrapper .work-experience {
     padding: 16px;
     width: 100%;
+    margin-top: 15px;
 }
 
 .wrapper .certifications,
