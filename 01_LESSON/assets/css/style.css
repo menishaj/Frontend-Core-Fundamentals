@@ -295,6 +295,7 @@ figure {
     flex-direction: column;
     align-items: center;
     margin-top: 20%;
+    position: relative;
 }
 
 .profile-picture img {
@@ -311,34 +312,6 @@ figure {
 
 .title {
     margin-top: 20px;
-}
-
-.title p {
-    opacity: 0;
-    overflow: hidden;
-    animation: fade 4s infinite;
-}
-
-.title .p1 {
-    animation-delay: 0s;
-}
-
-.title .p2 {
-    animation-delay: 2s;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 .intro {
@@ -422,7 +395,7 @@ figure {
     transform: translateX(0) rotateY(0deg);
 }
 
-.wrapper .whatido {
+.whatido {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -470,11 +443,11 @@ figure {
     transform-origin: bottom left;
 }
 
-.wrapper .tech-stack {
+.tech-stack {
     padding: 16px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 100%;
 }
 
 .tech-stack h1 {
@@ -582,15 +555,15 @@ figure {
     transform-origin: bottom left;
 }
 
-.wrapper .work-experience {
+.work-experience {
     padding: 16px;
     width: 100%;
     margin-top: 15px;
 }
 
-.wrapper .certifications,
-.wrapper .education,
-.wrapper .contactme {
+.certifications,
+.education,
+.contactme {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -650,8 +623,8 @@ figure {
 
 }
 
-.accordion {
-    width: 66%;
+.tech-stack .accordion {
+    width: 100%;
     margin: 33px auto;
     display: flex;
     flex-direction: column;
@@ -664,7 +637,7 @@ figure {
     grid-template-columns: auto 1fr auto;
     gap: 30px;
     align-items: center;
-    padding: 30px;
+    padding: 21px;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -734,3 +707,32 @@ figure {
 .active .hidden-box {
     display: block;
 }
+  
+.p1, .p2 {
+    position: absolute;
+    animation: fade 4s infinite;
+    left: 298px;
+  }
+  
+  .p1 {
+    animation-delay: 0s;
+  }
+  
+  .p2 {
+    animation-delay: 2s;
+  }
+  
+  .static {
+    position: relative;
+    z-index: 1;
+  }
+  
+  @keyframes fade {
+    0% { opacity: 1; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+    75% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+@media only screen and(mim-width: 768px) {}
