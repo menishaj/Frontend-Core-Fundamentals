@@ -4,9 +4,132 @@ html {
     padding: 0;
     margin: 0;
     font-family: "Montserrat", sans-serif;
-    ;
+    
 }
-
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    
+   
+  }
+  
+  .circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+  }
+  
+  .circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+  }
+  
+  
+  .circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+  }
+  
+  .circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+  }
+  
+  .circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+  }
+  
+  .circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+  }
+  
+  .circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+  }
+  
+  .circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+  }
+  
+  .circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+  }
+  
+  .circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+  }
+  
+  .circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+  }
+  
+  
+  
+  @keyframes animate {
+  
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+  
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+  
+  }
+  
 .wrapper {
     max-width: 414px;
 }
@@ -140,7 +263,7 @@ html {
     }
 
     #menu li {
-        background-color: #333;
+        background-color: #748D92;
         text-align: center;
         padding: 10px 0;
         border-bottom: 1px solid #fff;
@@ -188,8 +311,41 @@ figure {
     margin: 0 auto;
 }
 
+.profile-picture img:hover {
+    box-shadow: 0px 0px 20px 0px #006769;
+    transition: box-shadow 1s;
+}
+
 .title {
     margin-top: 20px;
+}
+
+.title p {
+    opacity: 0;
+    overflow: hidden;  
+    animation: fade 4s infinite;
+}
+
+.title .p1 {
+    animation-delay: 0s;
+}
+
+.title .p2 {
+    animation-delay: 2s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .intro {
@@ -237,39 +393,40 @@ figure {
     transition: all 0.35s;
     margin: 28px auto;
 }
+
 .button a:before,
 .button a:after {
-  position: absolute;
-  content: attr(data-title);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border: 2px solid #333;
-  text-indent: 0;
-  transition: all 0.35s;
+    position: absolute;
+    content: attr(data-title);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid #006769;
+    text-indent: 0;
+    transition: all 0.35s;
 }
 
 .button a:before {
-  color: #fff;
-  background: #333;
-  transform-origin: left;
-  transform: translateX(0) rotateY(0deg);
+    color: #fff;
+    background: #006769;
+    transform-origin: left;
+    transform: translateX(0) rotateY(0deg);
 }
 
 .button a:after {
-  color: #333;
-  background: #fff;
-  transform: translateX(-100%) rotateY(90deg);
-  transform-origin: right;
+    color: #006769;
+    background: #fff;
+    transform: translateX(-100%) rotateY(90deg);
+    transform-origin: right;
 }
 
 .button a:hover:before {
-  transform: translateX(100%) rotateY(90deg);
+    transform: translateX(100%) rotateY(90deg);
 }
 
 .button a:hover:after {
-  transform: translateX(0) rotateY(0deg);
+    transform: translateX(0) rotateY(0deg);
 }
 
 .wrapper .whatido {
@@ -282,22 +439,24 @@ figure {
     text-align: left;
     padding: 16px;
     width: 100%;
-    margin-top: 42px;;
+    margin-top: 42px;
+    ;
 
 }
 
 .whatido h3 {
-    color: #fcca00;
+    color: #40A578;
 }
 
 .container h2 {
     margin: 0;
+    margin: 31px;
 }
 
 .underline-effect {
     display: inline-block;
     position: relative;
-    color: #fcca00;
+    color: #40A578;
 }
 
 .underline-effect::after {
@@ -308,7 +467,7 @@ figure {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #fcca00;
+    background-color: #40A578;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -326,8 +485,7 @@ figure {
 }
 
 .tech-stack h1 {
-    border-bottom: 2.5px solid #726f6f;
-    margin-bottom: 20px;
+    margin-bottom: 31px;
     text-align: center;
 }
 
@@ -353,7 +511,7 @@ figure {
 }
 
 .clickable-text:hover {
-    color: #fcca00;
+    color: #40A578;
 }
 
 .timeline {
@@ -368,15 +526,15 @@ figure {
 }
 
 .timeline-text .underline-effect {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 31px;
+    font-size: 17px;
 }
 
 .timeline::after {
     content: "";
     position: absolute;
     width: 2px;
-    background-color: #000;
+    background-color: #40A578;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -393,7 +551,7 @@ figure {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #000;
+    background-color: #40A578;
     border-radius: 50%;
     top: 0;
     left: 50%;
@@ -413,12 +571,6 @@ figure {
     left: 30px;
 }
 
-.underline-effect {
-    display: inline-block;
-    position: relative;
-    color: #fcca00;
-}
-
 .underline-effect::after {
     content: "";
     position: absolute;
@@ -427,7 +579,7 @@ figure {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #fcca00;
+    background-color: #40A578;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -453,14 +605,22 @@ figure {
     width: 100%;
 
 }
-.education h2{
-    margin: 20px auto;
+
+.contactme h2 {
+    margin-bottom: 31px;
 }
-.education p{
+
+.education .edu {
+    list-style-type: none;
+    margin: 31px;
+}
+
+.education p {
     line-height: 2;
 }
+
 .certifications h2 {
-    margin-bottom: 20px;
+    margin-bottom: 31px;
 }
 
 .certs {
@@ -476,7 +636,15 @@ figure {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
+    gap: 18px;
+}
+
+.container-icon a {
+    color: #006769;
+}
+
+.container-icon a :visited {
+    color: #006769;
 }
 
 .copyright {
@@ -486,4 +654,89 @@ figure {
     flex-direction: column;
     padding: 33px 16px;
 
+}
+
+.accordion {
+    width: 66%;
+    margin: 33px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.item {
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 30px;
+    align-items: center;
+    padding: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.item h2 {
+    font-size: 18px;
+    color: #8D8E8A;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    color: #40A578;
+}
+
+.hidden-box {
+    grid-column: 1/3;
+    display: none;
+}
+
+.hidden-box p {
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+}
+
+.hidden-box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hidden-box ul li {
+    margin-left: 16px;
+    line-height: 1.5;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    border-top: 3px solid #40A578;
+    animation: borderline 1s linear forwards;
+}
+
+@keyframes borderline {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.active .hidden-box {
+    display: block;
 }
