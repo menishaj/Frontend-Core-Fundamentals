@@ -7,14 +7,18 @@
 
 body {
     width: 100%;
+    background: #e4e4e4;
+    animation: color 9s infinite linear;
 }
 
 .area {
-    background: #4e54c8;
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    background: #e4e4e4;
+    background: -webkit-linear-gradient(to left, #000, #e4e4e4);
     width: 100%;
     height: 100vh;
+    position: relative;
 }
+
 
 .circles {
     position: absolute;
@@ -31,7 +35,7 @@ body {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #024b49;
     animation: animate 25s linear infinite;
     bottom: -150px;
 }
@@ -41,6 +45,8 @@ body {
     width: 80px;
     height: 80px;
     animation-delay: 0s;
+    background: #d46c7b;
+
 }
 
 
@@ -50,6 +56,8 @@ body {
     height: 20px;
     animation-delay: 2s;
     animation-duration: 12s;
+    background: #804160;
+
 }
 
 .circles li:nth-child(3) {
@@ -135,7 +143,7 @@ body {
     display: flex;
     justify-content: space-between;
     z-index: 100;
-    background-color: grey;
+    background-color: #a9b7b7;
 }
 
 .logo {
@@ -233,7 +241,7 @@ body {
 
 @media screen and (max-width: 992px) {
     .header {
-        background-color: white;
+        background-color: #e5ecec;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         position: fixed;
         top: 0;
@@ -334,6 +342,7 @@ figure {
     text-align: left;
     margin-top: 20px;
     padding: 16px;
+
 }
 
 .background h1 {
@@ -374,20 +383,20 @@ figure {
     height: 100%;
     top: 0;
     left: 0;
-    border: 2px solid #006769;
+    border: 2px solid #074c56;
     text-indent: 0;
     transition: all 0.35s;
 }
 
 .button a:before {
     color: #fff;
-    background: #006769;
+    background: #074c56;
     transform-origin: left;
     transform: translateX(0) rotateY(0deg);
 }
 
 .button a:after {
-    color: #006769;
+    color: #3A5154;
     background: #fff;
     transform: translateX(-100%) rotateY(90deg);
     transform-origin: right;
@@ -416,7 +425,7 @@ figure {
 }
 
 .whatido h3 {
-    color: #40A578;
+    color: #9c5056;
 }
 
 .container h2 {
@@ -427,14 +436,9 @@ figure {
 .underline-effect {
     display: inline-block;
     position: relative;
-    color: #40A578;
+    color: #9c5056;
 }
 
-.underline-effect {
-    display: inline-block;
-    position: relative;
-    color: #40A578;
-}
 
 .underline-effect::after {
     content: "";
@@ -444,7 +448,7 @@ figure {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #40A578;
+    background-color: #9c5056;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -453,9 +457,11 @@ figure {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
 .tech-stack-desktop-only {
     display: none;
 }
+
 .tech-stack {
     padding: 16px;
 }
@@ -500,7 +506,7 @@ figure {
 }
 
 .clickable-text:hover {
-    color: #40A578;
+    color: #9c5056;
 }
 
 .timeline {
@@ -523,7 +529,7 @@ figure {
     content: "";
     position: absolute;
     width: 2px;
-    background-color: #40A578;
+    background-color: #9c5056;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -540,7 +546,7 @@ figure {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #40A578;
+    background-color: #9c5056;
     border-radius: 50%;
     top: 0;
     left: 50%;
@@ -568,7 +574,7 @@ figure {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #40A578;
+    background-color: #9c5056;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -673,7 +679,7 @@ figure {
 .icon {
     width: 24px;
     height: 24px;
-    color: #40A578;
+    color: #9c5056;
 }
 
 .hidden-box {
@@ -802,7 +808,7 @@ figure {
         display: flex;
         justify-content: space-between;
         z-index: 100;
-        background-color: grey;
+        background-color: #a9b7b7;
     }
 
     .intro {
@@ -874,10 +880,12 @@ figure {
         position: absolute;
         transition: all 0.3s;
     }
+
     .tech-stack-desktop-only {
         display: block;
     }
-    .tech-stack{
+
+    .tech-stack {
         display: none;
     }
 
@@ -925,10 +933,12 @@ figure {
         margin: 90px 37px;
 
     }
+
     .tech-stack-desktop-only {
         display: block;
     }
-    .tech-stack{
+
+    .tech-stack {
         display: none;
     }
 
@@ -961,10 +971,12 @@ figure {
         }
 
     }
+
     .tech-stack-desktop-only {
         display: block;
     }
-    .tech-stack{
+
+    .tech-stack {
         display: none;
     }
 
@@ -993,7 +1005,7 @@ figure {
         display: flex;
         justify-content: space-between;
         z-index: 100;
-        background-color: grey;
+        background-color: #a9b7b7;
     }
 
 
@@ -1044,10 +1056,12 @@ figure {
     h3 {
         margin-top: 0;
     }
+
     .tech-stack-desktop-only {
         display: block;
     }
-    .tech-stack{
+
+    .tech-stack {
         display: none;
     }
 
@@ -1056,7 +1070,7 @@ figure {
 .underline-effect {
     display: inline-block;
     position: relative;
-    color: #40A578;
+    color: #9c5056;
 }
 
 .underline-effect::after {
@@ -1067,7 +1081,7 @@ figure {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #40A578;
+    background-color: #9c5056;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
