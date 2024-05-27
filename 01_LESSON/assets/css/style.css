@@ -837,11 +837,12 @@ figure {
         .background .button {
             position: absolute;
             left: 24em;
-            top: 81%;
+            top: 89%;
         }
 
         .background p {
-            margin: 19px 0;
+            margin: 11px 0;
+            width: 79%;
         }
 
     }
