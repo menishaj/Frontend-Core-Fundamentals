@@ -428,9 +428,25 @@ figure {
     width: 100%;
     margin-top: 42px;
 }
+.grid-container{
+    display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.whatido .card {
+    width: 277px;
+    height: auto;
+    background-color: #eaf6f6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 14px;
+}
+
 
 .whatido h3 {
     color: #9c5056;
+    margin: 10px;
+    text-align: center;
 }
 
 .underline-effect {
@@ -763,35 +779,23 @@ figure {
     }
 }
 
-@media screen and (min-width: 576px) {
-    .whatido {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: auto;
-    }
-
-    .container h2 {
-        margin-top: 57px;
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .col {
-        flex: 1 0 45%;
-        margin: 10px;
-    }
-
-    h3 {
-        margin-top: 0;
-    }
-}
-
-
 @media screen and (min-width: 1024px) {
+    .whatido .card {
+        width: 277px;
+        height: auto;
+        background-color: #eaf6f6;
+        gap: 14px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: flex-start;
+    }
+
     .tech-stack-desktop-only .skills-show .clickable-text:first-child {
         background-color: white;
         border-radius: 25px;
@@ -931,6 +935,21 @@ figure {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1027px) {
+    .whatido .card {
+        width: 277px;
+        height: auto;
+        background-color: #eaf6f6;
+        gap: 14px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: flex-start;
+    }
 
     .intro {
         display: flex;
@@ -1023,6 +1042,21 @@ figure {
 }
 
 @media screen and (min-width: 864px) and (max-width: 1026px) {
+    .whatido .card {
+        width: 277px;
+        height: auto;
+        background-color: #eaf6f6;
+        gap: 14px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: flex-start;
+    }
 
     .timeline {
         position: relative;
@@ -1096,6 +1130,21 @@ figure {
 }
 
 @media screen and (min-width: 943px) and (max-width: 1025px) {
+    .whatido .card {
+        width: 277px;
+        height: auto;
+        background-color: #eaf6f6;
+        gap: 14px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: flex-start;
+    }
 
     .intro {
         display: flex;
@@ -1157,16 +1206,6 @@ figure {
         width: 80%;
         margin: auto;
 
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .col {
-        flex: 1 0 45%;
-        margin: 10px;
     }
 
     h3 {
@@ -1241,6 +1280,22 @@ figure {
 }
 
 @media screen and (min-width: 1027px) and (max-width: 1714px) {
+    .whatido .card {
+        width: 277px;
+        height: auto;
+        background-color: #eaf6f6;
+        gap: 14px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: flex-start;
+        grid-auto-rows: minmax(277px, auto);
+    }
 
     .timeline {
         position: relative;
@@ -1275,6 +1330,4 @@ figure {
         top: 0;
         left: 27em;
     }
-
-
 }
