@@ -428,11 +428,6 @@ figure {
     color: #9c5056;
 }
 
-.container h2 {
-    margin: 0;
-    margin: 31px;
-}
-
 .underline-effect {
     display: inline-block;
     position: relative;
@@ -781,7 +776,12 @@ figure {
     .whatido {
         display: flex;
         flex-direction: column;
+        width: 80%;
+        margin: auto;
     }
+.container h2{
+    margin-top: 57px;
+}
 
     .row {
         display: flex;
@@ -1042,6 +1042,9 @@ figure {
     .whatido {
         display: flex;
         flex-direction: column;
+        width: 80%;
+        margin: auto;
+
     }
 
     .row {
