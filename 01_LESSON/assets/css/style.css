@@ -10,7 +10,9 @@ body {
     background: #e4e4e4;
     animation: color 9s infinite linear;
 }
-
+.wrapper{
+    position: absolute;
+}
 .area {
     background: #e4e4e4;
     background: -webkit-linear-gradient(to left, #000, #e4e4e4);
@@ -837,12 +839,12 @@ figure {
         .background .button {
             position: absolute;
             left: 24em;
-            top: 89%;
+            top: 88%;
         }
 
         .background p {
-            margin: 11px 0;
-            width: 79%;
+            margin: 18px 0;
+            width: 72%;
         }
 
     }
@@ -994,7 +996,7 @@ figure {
         .background .button {
             position: absolute;
             left: 19em;
-            top: 70%;
+            top: 73%;
         }
     }
 
