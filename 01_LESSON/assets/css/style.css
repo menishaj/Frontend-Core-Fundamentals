@@ -10,9 +10,11 @@ body {
     background: #e4e4e4;
     animation: color 9s infinite linear;
 }
-.wrapper{
+
+.wrapper {
     position: absolute;
 }
+
 .area {
     background: #e4e4e4;
     background: -webkit-linear-gradient(to left, #000, #e4e4e4);
@@ -145,7 +147,7 @@ body {
     display: flex;
     justify-content: space-between;
     z-index: 100;
-    background-color: #a9b7b7;
+    background-color: #5c7373;
 }
 
 .logo {
@@ -157,7 +159,7 @@ body {
 .logo a {
     font-family: "Dancing Script", cursive;
     color: #222;
-    font-size: 22px;
+    font-size: 24px;
     display: block;
     text-decoration: none;
     font-weight: 400;
@@ -244,7 +246,7 @@ body {
 
 @media screen and (max-width: 992px) {
     .header {
-        background-color: #e5ecec;
+        background-color: #e0e6e6;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         position: fixed;
         top: 0;
@@ -465,7 +467,6 @@ figure {
 }
 
 .tech-stack h2 {
-    border-bottom: 2.5px solid #726f6f;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -707,19 +708,6 @@ figure {
     word-spacing: 3px;
 }
 
-.active {
-    position: relative;
-}
-
-.active::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    border-top: 3px solid #40A578;
-    animation: borderline 1s linear forwards;
-}
 
 @keyframes borderline {
     0% {
@@ -782,9 +770,10 @@ figure {
         width: 80%;
         margin: auto;
     }
-.container h2{
-    margin-top: 57px;
-}
+
+    .container h2 {
+        margin-top: 57px;
+    }
 
     .row {
         display: flex;
@@ -803,6 +792,52 @@ figure {
 
 
 @media screen and (min-width: 1024px) {
+    .tech-stack-desktop-only .skills-show .clickable-text:first-child {
+        background-color: white;
+        border-radius: 25px;
+        padding: 6px 20px;
+        margin-right: 10px;
+        color: #074c56;
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+        margin: 0 27em 50px 0;
+    }
+
+    .timeline::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        background-color: #9c5056;
+        top: 0;
+        bottom: 0;
+        left: 64%;
+    }
+
+    .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #9c5056;
+        border-radius: 50%;
+        top: 0;
+        left: 33em;
+    }
+
     .header {
         height: 65px;
         width: 100%;
@@ -811,7 +846,7 @@ figure {
         display: flex;
         justify-content: space-between;
         z-index: 100;
-        background-color: #a9b7b7;
+        background-color: #5c7373;
     }
 
     .intro {
@@ -830,6 +865,7 @@ figure {
             display: flex;
             flex-direction: column;
             margin-top: 10px;
+            width: 60%;
         }
 
         .background .name {
@@ -845,7 +881,6 @@ figure {
 
         .background p {
             margin: 18px 0;
-            width: 72%;
         }
 
     }
@@ -913,6 +948,7 @@ figure {
             display: flex;
             flex-direction: column;
             margin-top: 24px;
+            width: 60%;
         }
 
         .background .name {
@@ -932,6 +968,45 @@ figure {
 
     }
 
+    .timeline {
+        position: relative;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+        margin: 0 27em 50px 0;
+    }
+
+    .timeline::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        background-color: #9c5056;
+        top: 0;
+        bottom: 0;
+        left: 68%;
+    }
+
+    .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #9c5056;
+        border-radius: 50%;
+        top: 0;
+        margin-left: 29.5em;
+    }
+
+
     .profile-picture {
         display: flex;
         margin: 90px 37px;
@@ -945,10 +1020,43 @@ figure {
     .tech-stack {
         display: none;
     }
-
 }
 
 @media screen and (min-width: 864px) and (max-width: 1026px) {
+
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 40px 20px;
+    }
+
+    .timeline::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        background-color: #9c5056;
+        top: 0;
+        bottom: 0;
+        left: 67%;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+        margin: 0 27em 50px 0;
+    }
+
+    .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #9c5056;
+        border-radius: 50%;
+        top: 0;
+        left: 49%;
+    }
 
     .intro {
         display: flex;
@@ -960,6 +1068,7 @@ figure {
             display: flex;
             flex-direction: column;
             margin-top: 47px;
+            width: 60%;
         }
 
         .background .button {
@@ -1009,14 +1118,14 @@ figure {
         display: flex;
         justify-content: space-between;
         z-index: 100;
-        background-color: #a9b7b7;
+        background-color: #5c7373;
     }
 
 
     .logo a {
         font-family: "Dancing Script", cursive;
         color: white;
-        font-size: 22px;
+        font-size: 24px;
         display: block;
         text-decoration: none;
         font-weight: 400;
@@ -1103,7 +1212,6 @@ figure {
 }
 
 .tech-stack-desktop-only h1 {
-    border-bottom: 2.5px solid #726f6f;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -1130,4 +1238,43 @@ figure {
 
 .clickable-div:hover {
     color: #40A578;
+}
+
+@media screen and (min-width: 1027px) and (max-width: 1714px) {
+
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 40px 20px;
+    }
+
+    .timeline::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        background-color: #9c5056;
+        top: 0;
+        bottom: 0;
+        left: 67%;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+        margin: 0 27em 50px 0;
+    }
+
+    .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #9c5056;
+        border-radius: 50%;
+        top: 0;
+        left: 27em;
+    }
+
+
 }
