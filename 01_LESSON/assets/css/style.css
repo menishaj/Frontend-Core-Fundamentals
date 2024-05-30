@@ -6,7 +6,7 @@
 }
 
 body {
-    width: 100%;
+    /* width: 100%; */
     background: #e4e4e4;
     animation: color 9s infinite linear;
 }
@@ -428,11 +428,13 @@ figure {
     width: 100%;
     margin-top: 42px;
 }
-.grid-container{
+
+.grid-container {
     display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
+    grid-template-columns: 1fr;
+    gap: 0;
 }
+
 .whatido .card {
     width: 277px;
     height: auto;
@@ -440,6 +442,7 @@ figure {
     border-radius: 10px;
     padding: 20px;
     margin: 14px;
+    min-height: -webkit-fill-available;
 }
 
 
@@ -788,7 +791,7 @@ figure {
         border-radius: 10px;
         padding: 20px;
     }
-    
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -858,6 +861,7 @@ figure {
         margin-top: 100px;
         position: relative;
         gap: 71px;
+        width: 60%;
 
         .title {
             position: absolute;
@@ -869,7 +873,6 @@ figure {
             display: flex;
             flex-direction: column;
             margin-top: 10px;
-            width: 60%;
         }
 
         .background .name {
@@ -942,8 +945,9 @@ figure {
         gap: 14px;
         border-radius: 10px;
         padding: 20px;
+        min-height: -webkit-fill-available;
     }
-    
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1049,8 +1053,9 @@ figure {
         gap: 14px;
         border-radius: 10px;
         padding: 20px;
+        min-height: -webkit-fill-available;
     }
-    
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1137,8 +1142,9 @@ figure {
         gap: 14px;
         border-radius: 10px;
         padding: 20px;
+        min-height: -webkit-fill-available;
     }
-    
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1265,6 +1271,7 @@ figure {
     margin: 0 auto;
     cursor: pointer;
     list-style-type: none;
+    gap: 50px;
 }
 
 .skills-hide {
@@ -1287,8 +1294,9 @@ figure {
         gap: 14px;
         border-radius: 10px;
         padding: 20px;
+        min-height: -webkit-fill-available;
     }
-    
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
