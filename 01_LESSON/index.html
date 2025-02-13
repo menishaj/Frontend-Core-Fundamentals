@@ -37,10 +37,8 @@
                         <span class="menu-icon"></span>
                     </button>
                     <ul id="menu">
-                        <li><a href="index.html">About me</a></li>
-                        <li><a href="aboutus.html">Resume</a></li>
-                        <li><a href="samplepage.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutme.html">About me</a></li>
                     </ul>
                 </nav>
             </header>
@@ -53,17 +51,17 @@
                     <div class="title">
                         <p class="p1"><span class="role">Frontend</span><span class="static"> developer</span></p>
                     </div>
-                    <p>Hello! As a junior frontend developer, I'm thrilled to embark on the journey of crafting
+                    <p>Hello! As a frontend developer, I'm thrilled to embark on the journey of crafting
                         user-friendly
-                        interfaces. I'm passionate about learning and refining my skills in HTML, CSS, and
-                        JavaScript to
+                        interfaces. I'm passionate about learning and refining my skills in HTML, CSS,
+                        JavaScript and react Js to
                         build
                         visually stunning and functional websites and applications. With an eye for detail and a
                         knack
                         for
                         problem-solving.
                         Feel
-                        free to check out my portfolio to see some of my recent work and let's create something
+                        free to check out my portfolio and let's create something
                         amazing
                         together!
                     </p>
@@ -265,11 +263,14 @@
                     <li class="clickable-text" onclick="showContent(7)">Middleware</li>
                 </ul>
                 <div class="skills-hide">
+                    <div class="active-skill">
+                        Frontend : HTML5, CSS3, Sass, JavaScript,  Animation & Transitions, JQuery, React Js Basics, Wordpress, Figma, Photoshop, JIRA
+                    </div>
                     <div class="hidden-div" id="content1">
-                        Frontend : HTML5, CSS3, JavaScript
+                        Frontend : HTML5, CSS3, Sass, JavaScript, JQuery, React Js Basics, Wordpress, Figma, Photoshop, JIRA
                     </div>
                     <div class="hidden-div" id="content2">
-                        Backend : C# .NET, .NET MVC, .NET Core, JAVA, PHP, Python, VB.NET
+                        Backend : C# .NET, .NET MVC, .NET Core, JAVA, PHP, Python, VB.NET, Git, Github, Gitlab
                     </div>
                     <div class="hidden-div" id="content3">
                         Platforms: git, GitHub, Netlify, Microsoft Azure, Heroku
@@ -277,13 +278,18 @@
                     <div class="hidden-div" id="content4">Web servers : Apache, IIS</div>
                     <div class="hidden-div" id="content5">OS : Windows, Android</div>
                     <div class="hidden-div" id="content6">
-                        DB: Oracle 9i, MYSQL, SQL, XML/JSON
+                        DB: Oracle 9i, MYSQL, SQL, XML/JSON, Machine learning
                     </div>
                     <div class="hidden-div" id="content7">
                         Middleware: TCP/IP, SOAP, REST, ERP/CRM
                     </div>
                 </div>
             </section>
+            <!-- <section class="projects">
+                <div class="timeline-text">
+                    <h2>Featured Projects</h2>
+                </div>
+            </section> -->
             <section class="work-experience">
                 <div class="timeline-text">
                     <h2>Where I have worked?</h2>
@@ -352,10 +358,6 @@
                                 d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h14c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2zM9.984 15.523a5.539 5.539 0 0 0 5.538-5.539c0-.338-.043-.664-.103-.984H17v7.216a.69.69 0 0 1-.693.69H3.693a.69.69 0 0 1-.693-.69V9h1.549c-.061.32-.104.646-.104.984a5.54 5.54 0 0 0 5.539 5.539zM6.523 9.984a3.461 3.461 0 1 1 6.922 0a3.461 3.461 0 0 1-6.922 0zM16.307 6h-1.615A.694.694 0 0 1 14 5.308V3.691c0-.382.31-.691.691-.691h1.615c.384 0 .694.309.694.691v1.616c0 .381-.31.693-.693.693z" />
                         </svg>
                     </a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
-                        <path fill="#006769"
-                            d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.002v2.605h-1.197c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2z" />
-                    </svg>
                 </div>
                 <div class="copyright">
                     <p>&copy; 2023. Menisha Jugoo - Portfolio</p>
@@ -398,6 +400,8 @@
         var allContentDivs = document.querySelectorAll('.hidden-div');
         allContentDivs.forEach(function (div) {
             div.style.display = 'none';
+            const activeSkill = document.querySelector('.active-skill')
+            activeSkill.style.display = 'none';
         });
 
         // Show the selected content div
