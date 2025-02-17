@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,4 +42,100 @@
    }, 2000);
 </script>
 
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Checkboxes</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.checkbox-group {
+    font-size: 16px;
+    color: #333;
+}
+
+p {
+    font-weight: bold;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.custom-checkbox input {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #888;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background-color: #d63d1c;
+    border-color: #d63d1c;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+</style>
+<body>
+
+    <div class="checkbox-group">
+        <p>I'm interested in...</p>
+        <label class="custom-checkbox">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+            Product information & promotions
+        </label>
+        <label class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Motorsports
+        </label>
+        <label class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Car communities
+        </label>
+        <label class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Driving and road trips
+        </label>
+        <label class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            eSports and gaming
+        </label>
+    </div>
+
+</body>
 </html>

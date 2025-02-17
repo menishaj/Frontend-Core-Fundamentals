@@ -605,10 +605,15 @@ figure {
 
 .work-experience {
     padding: 16px;
-    width: 100%;
+    width: 888px;
     margin-top: 15px;
     position: relative;
     z-index: 99;
+    margin: auto;
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 .projects {
@@ -1009,7 +1014,7 @@ figure {
         background-color: #9c5056;
         top: 0;
         bottom: 0;
-        left: 68%;
+        left: 66%;
     }
 
     .timeline-item::after {
@@ -1076,7 +1081,7 @@ figure {
         background-color: #9c5056;
         top: 0;
         bottom: 0;
-        left: 67%;
+        left: 70%;
     }
 
     .timeline-item {
@@ -1290,7 +1295,7 @@ figure {
     }
 
     .whatido .card {
-        width: 277px;
+        width: 100%;
         height: auto;
         background-color: #eaf6f6;
         gap: 14px;
@@ -1305,6 +1310,7 @@ figure {
         justify-items: center;
         align-items: flex-start;
         grid-auto-rows: minmax(277px, auto);
+        gap: 15px;
     }
 
     .timeline {
@@ -1354,21 +1360,101 @@ figure {
         font-family: 'Montserrat', sans-serif;
     }
 
+    /* Typewriter effect 1 */
+@keyframes typing {
+    0.0000%, 27.3488% { content: ""; }
+    1.1395%, 26.2093% { content: "P"; }
+    2.2791%, 25.0698% { content: "Pa"; }
+    3.4186%, 23.9302% { content: "Pass"; }
+    4.5581%, 22.7907% { content: "Passi"; }
+    5.6977%, 21.6512% { content: "Passio"; }
+    6.8372%, 20.5116% { content: "Passion"; }
+    7.9767%, 19.3721% { content: "Passions"; }
+  
+    30.7674%, 51.2791% { content: ""; }
+    31.9070%, 50.1395% { content: "P"; }
+    33.0465%, 49.0000% { content: "Pr"; }
+    34.1860%, 47.8605% { content: "Pro"; }
+    35.3256%, 46.7209% { content: "Proj"; }
+    36.4651%, 45.5814% { content: "Proje"; }
+    37.6047%, 44.4419% { content: "Projec"; }
+    38.6047%, 43.4419% { content: "Projec"; }
+    39.6047%, 42.4419% { content: "Project"; }
+    40.6047%, 41.4419% { content: "Projects"; }
+
+
+    54.6977%, 75.2093% { content: ""; }
+    55.8372%, 74.0698% { content: "P"; }
+    56.9767%, 72.9302% { content: "Pu"; }
+    58.1163%, 71.7907% { content: "Pur"; }
+    59.2558%, 70.6512% { content: "Purp"; }
+    60.3953%, 69.5116% { content: "Purpo"; }
+    61.5349%, 68.3721% { content: "Purpos"; }
+    62.5349%, 67.3721% { content: "Purpose"; }
+
+   }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .typewriter {
+    --caret: currentcolor;
+  }
+  
+  .typewriter::before {
+    content: "";
+    animation: typing 13.5s infinite;
+  }
+  
+  .typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+  }
+  
+  .typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+  }
+  
+  .typewriter.nocaret::after {
+    border-right: 0;
+  }
+  
+  
+  @media (prefers-reduced-motion) {
+    .typewriter::after {
+      animation: none;
+    }
+    
+    @keyframes sequencePopup {
+      0%, 100% { content: "Passions"; }
+      25% { content: "Projects"; }
+      50% { content: "Purpose"; }
+    }
+  
+    .typewriter::before {
+      content: "developer";
+      animation: sequencePopup 12s linear infinite;
+    }
+  }
+  
+
     .container{
-        background-color: #f0f0f0;
         margin: 0;
         display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center the items horizontally */
-        gap: 20px; /* Add spacing between sections */
-        padding: 20px; /* Add padding for better layout */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+        padding: 20px;
         }
         .image-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            width: 100%;
-            max-width: 475px;
+            width: 400px;
+            height: 400px;
 
         @media screen and (max-width:767px) {
             grid-template-columns: repeat(1, 1fr);
@@ -1390,10 +1476,14 @@ figure {
     .image-text {
         max-width: 475px;
         text-align: center;
+        padding: 13px;
     }
     
     .image-item {
         position: relative; 
+        width: 200px;
+        height: 200px;
+
     }
     
     .image-item img {
@@ -1420,13 +1510,14 @@ figure {
         }
     }
 
-    @media (max-width: 766px) {
+    @media (max-width: 767px) {
         
         .image-grid > .text-item {
             height: 80px; 
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
         }
     
         
@@ -1439,7 +1530,7 @@ figure {
         .image-grid > .text-item,
         .image-grid > .image-item {
             height: 80px; 
-        }
+        }    
     
         
         .image-grid > .text-item img,
@@ -1462,13 +1553,11 @@ figure {
 
             
             .image-grid {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                width: 100%;
-                max-width: 475px;
-            }
-        
+                grid-template-columns: 1fr; /* Ensure single column layout */
+                grid-template-rows: auto;
+                width: 100%; /* Adjust width to fit mobile screens */
+                }
+    
             
             .image-grid .text-item2 {
                 order: 2; 
@@ -1502,6 +1591,7 @@ figure {
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
             height: 100%;     
             background-color: #9ebfbf; 
             }
@@ -1513,14 +1603,14 @@ figure {
         font-weight: bold;
     }
     .text2 {
-        font-size: 33px; 
+        font-size: 28px; 
         color: #ffffff; 
         font-weight: bold;
     }
 
     .about-heading{
         font-family: 'Montserrat', sans-serif;
-        font-size: 18px;
+        font-size: 19px;
         font-weight: 700;
         padding: 20px;
     }
@@ -1539,6 +1629,8 @@ figure {
     
         .image-text {
             max-width: 100%; 
+            position: relative;
+            top: 12px;
         }
     
         .text {
@@ -1549,3 +1641,75 @@ figure {
             font-size: 28px; 
         }
     }
+    @media (min-width: 769px) and (max-width: 989px){
+    
+        .image-text {
+            max-width: 100%; 
+            position: relative;
+            top: 22px;
+        }
+    }
+ .grid-image {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+@media (max-width: 436px) {
+    .grid-image {
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 103%;
+    }
+    .image-text {
+        text-align: center; 
+        padding-top: 10px;
+        position: relative;
+        top: 392px;
+    }
+
+    .image-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (min-width: 436px) and (max-width: 767px) {
+    .grid-image {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+@media (min-width: 412px) and (max-width: 436px) {
+    .grid-image {
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 96%;
+    }
+}
+@media (min-width: 440px) and (max-width: 766px) {
+    .grid-image {
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 409px;
+    }
+    .image-text {
+        text-align: center; 
+        padding-top: 10px;
+        position: relative;
+        top: 422px;
+    }
+}
+
+
+.animated-text{
+    padding: 20px;
+    margin-top: 86px;
+    margin-bottom: 1px;
+}
+ 
+ .main-heading{
+    font-size: 25px;
+    padding: 30px;
+ }
+
+ 
